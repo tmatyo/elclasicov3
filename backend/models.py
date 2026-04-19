@@ -36,7 +36,7 @@ class Stat(SQLModel, table=True):
 
 
 class Fixture(SQLModel, table=True):
-    id: int | None = Field(default=None, primary_key=True, index=True)
+    id: int | None = Field(default=None, primary_key=True)
     date: str
     home_team: str
     away_team: str
