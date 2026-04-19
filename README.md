@@ -220,10 +220,6 @@ docker run -p 3000:3000 elclasico-frontend:latest
 - **Upcoming Matches**: Scraped from flashscore.sk
 - **Historical Data**: Scraped from transfermarkt.com
 
-## CORS Configuration
-
-The backend is configured to accept requests from `http://localhost:3000` (frontend development server). Modify the `allow_origins` setting in `backend/main.py` when deploying to production.
-
 ## Project Versions
 
 - **v1.0** - Initial release (18-Mar-2019)
