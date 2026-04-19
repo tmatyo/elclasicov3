@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+
+  background: var(--background);
+  color: var(--foreground);
+	font-family: var(--font-quicksand), sans-serif;
+	/* font-family: var(--font-righteous), cursive; */
+	/* font-family: var(--font-baloo-chettan-2), cursive; */
+	/* font-family: var(--font-alfa-slab-one), cursive; */
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+
+#app {
+  background-color: #e7f6f6;
+  color: #ccc;
+  padding: 10px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+#app h1,
+#app h2,
+#app h3 {
+  text-transform: uppercase;
+  color: #24345a;
+  text-align: center;
+}
+
+#app #fixtures,
+#app #schedules {
+  font-size: 15px;
+}
