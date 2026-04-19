@@ -8,12 +8,11 @@ export default function NoData() {
 
 			<p className="mt-2 text-gray-500 max-w-md">Žiadne dáta k dispozícii. Skúste to znova neskôr.</p>
 
-			<button
-				className="mt-6 px-5 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition"
-				onClick={() => refresh()}
-			>
-				Refresh
-			</button>
+			<form action={refresh}>
+				<button className="mt-6 px-5 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
+					Refresh
+				</button>
+			</form>
 		</div>
 	);
 }
