@@ -21,7 +21,7 @@ export default function NotFound() {
 				href="/"
 				className="absolute bottom-10 z-10 px-6 py-3 bg-white text-green-800 font-bold rounded-full shadow-lg hover:bg-gray-200 transition"
 			>
-				🏠 Go Home
+				🏠 Domov
 			</Link>
 
 			<div className="absolute animate-bounce top-10 right-10 text-5xl">⚽</div>
