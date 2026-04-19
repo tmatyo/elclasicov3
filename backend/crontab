@@ -1,0 +1,2 @@
+# Run every day at 2:34
+34 2 * * * root export $(cat /proc/1/environ | tr '\0' '\n' | xargs) && /usr/local/bin/python /app/backend/crawler.py >> /var/log/crawler.log 2>&1
