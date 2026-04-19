@@ -3,6 +3,7 @@ import Schedule from "../src/components/Schedule";
 import { useFetchData } from "@/src/service/fetchData";
 import Fixtures from "@/src/components/Fixtures";
 import Stats from "@/src/components/Stats";
+import NoData from "@/src/components/NoData";
 
 export default async function Home() {
 	const { data, error } = await useFetchData<FetchResultData>();
@@ -13,7 +14,7 @@ export default async function Home() {
 			{schedule && <Schedule data={schedule} />}
 			{stats && <Stats data={stats} />}
 			{fixtures && <Fixtures data={fixtures} />}
-			{error && <div>Error bazmeg</div>}
+			{error && <NoData />}
 		</>
 	);
 }
