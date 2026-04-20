@@ -1,5 +1,3 @@
-import real from "@/src/svg/Real_Madrid_CF.svg";
-
 export default function RealMadridLogo() {
 	return (
 		<div className="flex justify-center items-center h-60 w-auto">

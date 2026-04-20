@@ -23,18 +23,3 @@ export async function useFetchData<T>(url?: string): Promise<UseFetchResult<T>> 
 	}
 	return result;
 }
-
-export async function useFetchSchedule<T>(): Promise<UseFetchResult<T>> {
-	const path = `${process.env.API_ENDPOINT}${process.env.API_GET_SCHEDULE}`;
-	return await useFetchData<T>(path);
-}
-
-export async function useFetchStats<T>(): Promise<UseFetchResult<T>> {
-	const path = `${process.env.API_ENDPOINT}${process.env.API_GET_STATS}`;
-	return await useFetchData<T>(path);
-}
-
-export async function useFetchFixtures<T>(): Promise<UseFetchResult<T>> {
-	const path = `${process.env.API_ENDPOINT}${process.env.API_GET_FIXTURES}`;
-	return await useFetchData<T>(path);
-}
