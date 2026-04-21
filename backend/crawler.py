@@ -32,7 +32,28 @@ def view_source(mode):
             get_schedule(page)
         elif (mode == "fixture"):
             page.goto(fixture_url)
-            page.wait_for_selector('tr')
+            page.wait_for_load_state('networkidle')
+
+            # Try to dismiss cookie consent popup if it exists
+            try:
+                page.click('button:has-text("Accept")', timeout=5000)
+            except:
+                pass
+
+            try:
+                page.click(
+                    '[data-testid="cookie-accept"], .cookie-consent-accept, button[aria-label*="cookie"]', timeout=5000)
+            except:
+                pass
+
+            try:
+                page.wait_for_selector('tr', timeout=60000)
+            except Exception as e:
+                # Save a screenshot for debugging
+                page.screenshot(path="fixture_debug.png")
+                print(f"Failed to find table: {e}")
+                raise
+
             get_fixtures(page)
         else:
             print(f'Mode {mode} was useless...')
