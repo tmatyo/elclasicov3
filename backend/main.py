@@ -2,8 +2,9 @@ import os
 
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from backend.models import ImportDataRequest, get_db, create_tables
-from backend.services import import_crawler_data, get_crawler_data, get_schedule_from_db, get_stats_from_db, get_fixtures_from_db
+from src.models import ImportDataRequest, get_db, create_tables
+from src.services import import_crawler_data, get_crawler_data, get_schedule_from_db, get_stats_from_db, get_fixtures_from_db
+from src.auth import verify_api_key
 from contextlib import asynccontextmanager
 from sqlmodel import Session
 
@@ -31,7 +32,7 @@ def read_root():
     return {"status": "ok", "message": "Ready for your requests"}
 
 
-@app.post("/import-data")
+@app.post("/import-data", dependencies=[Depends(verify_api_key)])
 def import_data(data: ImportDataRequest, db: Session = Depends(get_db)):
     return import_crawler_data(data, db)
 

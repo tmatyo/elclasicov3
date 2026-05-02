@@ -1,5 +1,5 @@
-from backend.models import ImportDataRequest, Schedule, Stat, Fixture, ResponseDataRequest
-from sqlmodel import Session, select
+from src.models import ImportDataRequest, Schedule, Stat, Fixture, ResponseDataRequest
+from sqlmodel import Session, select, delete
 from fastapi import HTTPException
 from typing import List
 
@@ -9,6 +9,11 @@ def import_crawler_data(data: ImportDataRequest, db: Session):
     Import crawler data into the database
     """
     try:
+        # Delete all existing records
+        db.exec(delete(Schedule))
+        db.exec(delete(Stat))
+        db.exec(delete(Fixture))
+
         imported_counts = {
             "schedules": 0,
             "stats": 0,
