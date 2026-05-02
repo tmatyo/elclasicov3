@@ -1,0 +1,5 @@
+*/**/env
+*/**/venv
+*/**/crawler_venv
+*/**/__pycache__/*
+
