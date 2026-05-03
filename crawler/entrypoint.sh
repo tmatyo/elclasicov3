@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# Start cron in foreground in background process
-cron -f &
-CRON_PID=$!
+echo "Starting web scraper with cron job scheduler..."
+echo "Scheduled runs: Every day at 2:34"
+echo "Logs: /var/log/crawler.log"
+echo ""
 
-echo "Cron started with PID $CRON_PID"
-
-# Trap signals for graceful shutdown
-trap 'kill $CRON_PID; exit 0' SIGTERM SIGINT
-echo "Trapped SIGTERM and SIGINT, will kill cron with PID $CRON_PID"
+# Start cron daemon in foreground
+exec cron -f
