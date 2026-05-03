@@ -1,6 +1,6 @@
+import os
 from datetime import datetime, timezone
 from typing import List, Optional
-import os
 from sqlmodel import Field, Session, SQLModel, create_engine
 
 DB_HOST = os.getenv("DB_HOST", 'localhost')
@@ -54,10 +54,12 @@ class ImportDataRequest(SQLModel):
     stats: Optional[List[Stat]] = []
     fixtures: Optional[List[Fixture]] = []
 
+
 class ResponseDataRequest(SQLModel):
     schedules: List[Schedule] = []
     stats: List[Stat] = []
     fixtures: List[Fixture] = []
+
 
 def get_db():
     with Session(engine) as session:

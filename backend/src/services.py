@@ -1,4 +1,4 @@
-from src.models import ImportDataRequest, Schedule, Stat, Fixture, ResponseDataRequest
+from backend.src.models import ImportDataRequest, Schedule, Stat, Fixture, ResponseDataRequest
 from sqlmodel import Session, select, delete
 from fastapi import HTTPException
 from typing import List
