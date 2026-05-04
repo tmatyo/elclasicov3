@@ -35,6 +35,11 @@ export default function RootLayout({
 		>
 			<body className="min-h-full flex flex-col" suppressHydrationWarning>
 				{children}
+				<footer className="text-center py-2.5">
+					<p className="text-sm text-gray-500">
+						© {new Date().getFullYear()} El Clasico. Všetky práva vyhradené.
+					</p>
+				</footer>
 			</body>
 		</html>
 	);
