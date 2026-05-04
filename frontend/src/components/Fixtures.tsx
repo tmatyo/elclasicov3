@@ -12,7 +12,7 @@ export default function Fixtures(props: FixtureProps) {
 	}, []);
 
 	const formatMatchTime = (matchDate: string) => {
-		return new Date(matchDate).toLocaleDateString(window.navigator.language);
+		return new Date(matchDate).toLocaleDateString("sk-SK");
 	};
 
 	const getTitle = (event: string, attendance: string) => {

@@ -6,13 +6,9 @@ import { FetchResultSchedule, ScheduleProps } from "@/types/app";
 
 export default function Schedule(props: ScheduleProps) {
 	const [matchTime, setMatchTime] = useState<Date>(new Date());
-	const [userLanguage, setUserLanguage] = useState<string>("sk-SK");
 	const [schedule, setSchedule] = useState<FetchResultSchedule | null>(null);
 
 	useEffect(() => {
-		if (typeof navigator !== "undefined" && navigator.language) {
-			setUserLanguage(navigator.language);
-		}
 		if (props.data.length > 0) {
 			setSchedule(props.data[0]);
 		}
@@ -22,7 +18,7 @@ export default function Schedule(props: ScheduleProps) {
 
 	const formatMatchTime = (matchTime: Date) => {
 		const options: Intl.DateTimeFormatOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
-		return new Date(matchTime).toLocaleString(userLanguage, options);
+		return new Date(matchTime).toLocaleString("sk-SK", options);
 	};
 
 	const isClassicoPlanned = (): boolean => !!schedule?.away_team && !!schedule?.home_team && !!schedule?.time;
