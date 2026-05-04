@@ -27,7 +27,7 @@ export default function Stats(props: StatProps) {
 		stats !== statusQuo && (
 			<div className="my-12 flex justify-center flex-col items-center">
 				<h2 className="text-center text-3xl font-bold text-heading mb-8">Štatistiky</h2>
-				<table>
+				<table className="rounded overflow-hidden">
 					<tbody>
 						<tr>
 							<th className="p-2.5 text-center bg-[#24355a] text-white">Zápasy</th>
