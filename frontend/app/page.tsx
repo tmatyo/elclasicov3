@@ -11,10 +11,10 @@ export default async function Home() {
 
 	return (
 		<>
-			{schedule && <Schedule data={schedule} />}
-			{stats && <Stats data={stats} />}
-			{fixtures && <Fixtures data={fixtures} />}
-			{error && <NoData />}
+			{schedule && schedule?.length > 0 && <Schedule data={schedule} />}
+			{stats && stats?.length > 0 && <Stats data={stats} />}
+			{fixtures && fixtures?.length > 0 && <Fixtures data={fixtures} />}
+			{error || (!schedule && !stats && !fixtures && <NoData />)}
 		</>
 	);
 }
