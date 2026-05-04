@@ -33,7 +33,7 @@ export default function Fixtures(props: FixtureProps) {
 								href={row.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="bg-[#24345a] text-white text-center rounded cursor-pointer no-underline
+								className="bg-[#24345a] height-auto text-white text-center rounded cursor-pointer no-underline
               						h-22.5 leading-5 text-[15px] items-center hover:text-white p-3.75 flex flex-col gap-3"
 							>
 								<div>
