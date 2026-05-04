@@ -14,7 +14,7 @@ export default async function Home() {
 			{schedule && schedule?.length > 0 && <Schedule data={schedule} />}
 			{stats && stats?.length > 0 && <Stats data={stats} />}
 			{fixtures && fixtures?.length > 0 && <Fixtures data={fixtures} />}
-			{error || (!schedule && !stats && !fixtures && <NoData />)}
+			{(error || !schedule && !stats && !fixtures) && <NoData />}
 		</>
 	);
 }

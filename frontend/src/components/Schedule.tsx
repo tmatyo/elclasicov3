@@ -31,7 +31,7 @@ export default function Schedule(props: ScheduleProps) {
 
 	return (
 		schedule && (
-			<div id="schedule" className="flex flex-col items-center pt-28 pb-12">
+			<div id="schedule" className="flex flex-col items-center pt-14 sm:pt-28 pb-12">
 				<div className="container 2xl:w-[60%] 2xl:mx-auto">
 					<h1 className="text-center mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl">Nasledujúce El Clasico</h1>
 					<h3 className="text-center text-3xl font-bold text-heading">{matchTime instanceof Date ? formatMatchTime(matchTime) : "-"}</h3>

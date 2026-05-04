@@ -11,14 +11,14 @@ export default function Banner({ awayTeam, homeTeam, isPlanned }: BannerProps) {
 				<>
 					<div>
 						{getLogo(homeTeam)}
-						<h2 className="mt-8 font-bold md:mt-0 sm:hidden">{homeTeam}</h2>
+						{/* <h2 className="mt-8 font-bold md:mt-0 hidden sm:block">{homeTeam}</h2> */}
 					</div>
-					<div className="pt-37.5 md:pt-25 sm:pt-6.25 sm:hidden">
+					<div className="pt-37.5 md:pt-25 sm:pt-6.25 hidden sm:block">
 						<h2>VS</h2>
 					</div>
 					<div>
 						{getLogo(awayTeam)}
-						<h2 className="mt-8 font-bold md:mt-0 sm:hidden">{awayTeam}</h2>
+						{/* <h2 className="mt-8 font-bold md:mt-0 hidden sm:block">{awayTeam}</h2> */}
 					</div>
 				</>
 			) : (

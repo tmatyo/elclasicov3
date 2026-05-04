@@ -76,26 +76,26 @@ export default function Countdown({ time, passMatchTimeToParent }: CountdownProp
 
 	return (
 		<div id="countdown">
-			<div className="grid w-full text-center text-white gap-1.25 grid-cols-[repeat(auto-fit,minmax(100px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(150px,1fr))]">
-				<div className="cd-cell">
+			<div className="grid w-full text-center text-white sm:gap-1.25 grid-cols-[repeat(auto-fit,minmax(50%,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(100px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(150px,1fr))]">
+				<div className="cd-cell mb-2.5 sm:mb-0">
 					<div className="w-25 h-25 mx-auto mb-1.25 leading-25 text-[50px] font-bold bg-[#26cdcb] md:w-full text-shadow-[1px_1px_5px_#136d6c]">
 						{countDown.days}
 					</div>
 					<div className="w-25 mx-auto bg-[#26cdcb] uppercase text-[15px] font-bold md:w-full">Dní</div>
 				</div>
-				<div className="cd-cell">
+				<div className="cd-cell mb-2.5 sm:mb-0">
 					<div className="w-25 h-25 mx-auto mb-1.25 leading-25 text-[50px] font-bold bg-[#26cdcb] md:w-full text-shadow-[1px_1px_5px_#136d6c]">
 						{countDown.hours}
 					</div>
 					<div className="w-25 mx-auto bg-[#26cdcb] uppercase text-[15px] font-bold md:w-full">Hodín</div>
 				</div>
-				<div className="cd-cell">
+				<div className="cd-cell mb-2.5 sm:mb-0">
 					<div className="w-25 h-25 mx-auto mb-1.25 leading-25 text-[50px] font-bold bg-[#26cdcb] md:w-full text-shadow-[1px_1px_5px_#136d6c]">
 						{countDown.minutes}
 					</div>
 					<div className="w-25 mx-auto bg-[#26cdcb] uppercase text-[15px] font-bold md:w-full">Minút</div>
 				</div>
-				<div className="cd-cell">
+				<div className="cd-cell mb-2.5 sm:mb-0">
 					<div className="w-25 h-25 mx-auto mb-1.25 leading-25 text-[50px] font-bold bg-[#26cdcb] md:w-full text-shadow-[1px_1px_5px_#136d6c]">
 						{countDown.seconds}
 					</div>

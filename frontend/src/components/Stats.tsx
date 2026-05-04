@@ -27,7 +27,7 @@ export default function Stats(props: StatProps) {
 		stats !== statusQuo && (
 			<div className="my-12 flex justify-center flex-col items-center">
 				<h2 className="text-center text-3xl font-bold text-heading mb-8">Štatistiky</h2>
-				<table className="rounded overflow-hidden">
+				<table className="hidden sm:block rounded overflow-hidden">
 					<tbody>
 						<tr>
 							<th className="p-2.5 text-center bg-[#24355a] text-white">Zápasy</th>
@@ -43,6 +43,34 @@ export default function Stats(props: StatProps) {
 							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.draw}</td>
 							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.real}</td>
 							<td className="p-2.5 text-center bg-[#24355a] text-white">{`${stats.barca_goals}:${stats.real_goals}`}</td>
+							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.avg_attendance}</td>
+						</tr>
+					</tbody>
+				</table>
+				<table className="block sm:hidden rounded overflow-hidden">
+					<tbody>
+						<tr>
+							<th className="p-2.5 text-center bg-[#24355a] text-white">Zápasy</th>
+							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.matches}</td>
+						</tr>
+						<tr>
+							<th className="p-2.5 text-center bg-[#24355a] text-white">Barcelona</th>
+							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.barca}</td>
+						</tr>
+						<tr>
+							<th className="p-2.5 text-center bg-[#24355a] text-white">Remíza</th>
+							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.draw}</td>
+						</tr>
+						<tr>
+							<th className="p-2.5 text-center bg-[#24355a] text-white">Real Madrid</th>
+							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.real}</td>
+						</tr>
+						<tr>
+							<th className="p-2.5 text-center bg-[#24355a] text-white">Na góly</th>
+							<td className="p-2.5 text-center bg-[#24355a] text-white">{`${stats.barca_goals}:${stats.real_goals}`}</td>
+						</tr>
+						<tr>
+							<th className="p-2.5 text-center bg-[#24355a] text-white">Priemerná návštevnosť</th>
 							<td className="p-2.5 text-center bg-[#24355a] text-white">{stats.avg_attendance}</td>
 						</tr>
 					</tbody>
